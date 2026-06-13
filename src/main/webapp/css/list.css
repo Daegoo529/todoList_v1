@@ -1,0 +1,171 @@
+
+    /* 기본 스타일 리셋 및 배경 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fb;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* 전체 감싸는 컨테이너 */
+.todo-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.15);
+    width: 100%;
+    max-width: 900px;
+}
+
+/* 상단 유저 정보 및 로그아웃 헤더 구역 */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f1f3f5;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    font-size: 16px;
+    color: #495057;
+}
+
+.user-info strong {
+    color: #4a90e2;
+    font-size: 18px;
+}
+
+/* 로그아웃 버튼 스타일 */
+.btn-logout {
+    background-color: #fff;
+    color: #fa5252;
+    border: 1px solid #ffe3e3;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #fff5f5;
+    border-color: #ffa8a8;
+}
+
+/* 타이틀과 추가 버튼을 감싸는 정렬 컨테이너 */
+.title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* 테이블 캡션 (타이틀) */
+.table-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212529;
+}
+
+/* 추가 버튼 세련된 스타일로 변경 */
+.btn-register {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white !important; /* 아래 기본 a 태그 스타일 덮어쓰기 */
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-register:hover {
+    background-color: #357abd;
+    text-decoration: none !important;
+}
+
+/* 테이블 기본 스타일 구조 조정 */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+td {
+    border-bottom: 1px solid #f1f3f5;
+    color: #495057;
+    background-color: #fff;
+}
+
+/* 행 마우스 호버 효과 */
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+/* 테이블 내 링크 스타일 */
+table a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+table a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+/* 상태 표시 뱃지 스타일 (DONE / NOT YET) */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-done {
+    background-color: #e3fafc;
+    color: #0c8599;
+}
+
+.badge-yet {
+    background-color: #fff0f6;
+    color: #d6336c;
+}

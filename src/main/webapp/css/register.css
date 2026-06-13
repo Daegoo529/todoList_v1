@@ -1,0 +1,102 @@
+
+    /* 기본 스타일 리셋 및 배경 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 등록 폼 카드 스타일 */
+.register-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-container h2 {
+    color: #333333;
+    margin-bottom: 24px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 입력창 스타일 */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #333333;
+}
+
+/* 입력창 포커스 시 효과 */
+.input-group input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* 버튼 그룹 스타일 */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn-group button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* REGISTER 버튼 (제출) */
+.btn-submit {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #357abd;
+}
+
+/* RESET 버튼 (초기화) */
+.btn-reset {
+    background-color: #f1f3f5;
+    color: #495057;
+}
+
+.btn-reset:hover {
+    background-color: #e9ecef;
+}
