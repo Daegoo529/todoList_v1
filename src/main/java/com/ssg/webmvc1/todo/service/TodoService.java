@@ -61,7 +61,7 @@ public enum TodoService {
         dto.setTno(tno);
         dto.setTitle(vo.getTitle());
         dto.setDueDate(vo.getDueDate());
-        dto.setFinished(false);
+        dto.setFinished(vo.isFinished());
         return dto;
     }
 
