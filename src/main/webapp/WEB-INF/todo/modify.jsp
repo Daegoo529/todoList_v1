@@ -51,7 +51,7 @@
         <input type="hidden" name="tno" value="${dto.tno}" readonly>
         <button type="submit" class="btn-remove">Remove</button>
     </form>
-</div> <!-- .btn-container 마감 -->
+        </div> <!-- .btn-container 마감 -->
 
 </div>
 

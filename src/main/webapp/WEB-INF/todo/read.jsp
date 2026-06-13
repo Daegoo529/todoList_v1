@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Todo Read</title>
-
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/read.css">
 </head>
 <body>
 
