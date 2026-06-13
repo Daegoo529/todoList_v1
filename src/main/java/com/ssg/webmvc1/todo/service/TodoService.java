@@ -9,6 +9,7 @@ import com.ssg.webmvc1.todo.dao.TodoDAO;
 import com.ssg.webmvc1.todo.domain.TodoVO;
 import com.ssg.webmvc1.todo.dto.TodoDTO;
 import com.ssg.webmvc1.todo.util.MapperUtil;
+import com.ssg.webmvc1.todo.validation.TodoValidator;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
 
@@ -32,6 +33,11 @@ public enum TodoService {
     }
 
     public void register(TodoDTO todoDTO) throws Exception {
+        // 빈칸 검사
+       
+        TodoValidator.validate(todoDTO);
+
+
         TodoVO todoVO = modelMapper.map(todoDTO, TodoVO.class);
         //System.out.println("todoVO :" + todoVO);
         log.info(todoVO);
