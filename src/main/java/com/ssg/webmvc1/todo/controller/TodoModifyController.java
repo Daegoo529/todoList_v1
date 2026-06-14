@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -38,13 +39,20 @@ public class TodoModifyController  extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String dueDateStr = req.getParameter("dueDate");
+
+        LocalDate dueDate = null;
+
+        if (dueDateStr != null && !dueDateStr.trim().isEmpty()) {
+            dueDate = LocalDate.parse(dueDateStr, DATEFORMATTER);
+        }
 
         String finishedStr = req.getParameter("finished");
 
         TodoDTO todoDTO = TodoDTO.builder()
                 .tno(Long.parseLong(req.getParameter("tno")))
                 .title(req.getParameter("title"))
-                .dueDate(LocalDate.parse(req.getParameter("dueDate"),DATEFORMATTER ))
+                .dueDate(dueDate)
                 .finished( finishedStr !=null && finishedStr.equals("on")  )
                 .build();
 
@@ -53,7 +61,16 @@ public class TodoModifyController  extends HttpServlet {
         try {
             todoService.modify(todoDTO);
         } catch (Exception e) {
-            e.printStackTrace();
+            resp.setContentType("text/html;charset=UTF-8");
+
+            PrintWriter out = resp.getWriter();
+
+            out.println("<script>");
+            out.println("alert('" + e.getMessage() + "');");
+            out.println("history.back();");
+            out.println("</script>");
+
+            return;
         }
         resp.sendRedirect("/todo/list");
 

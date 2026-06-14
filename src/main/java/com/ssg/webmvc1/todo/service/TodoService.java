@@ -89,6 +89,7 @@ public enum TodoService {
     }
 
     public void modify(TodoDTO todoDTO)throws Exception {
+        TodoValidator.validate(todoDTO);
 
         log.info("todoDTO: " + todoDTO );
 
