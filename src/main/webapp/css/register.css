@@ -70,7 +70,9 @@ body {
     margin-top: 28px;
 }
 
-.btn-group button {
+ /* ★ 1. button과 a 태그 둘 다 동일한 베이스 스타일을 갖도록 선택자 추가 */
+.btn-group button,
+.btn-group a {
     flex: 1;
     padding: 12px;
     border: none;
@@ -79,6 +81,11 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
+
+    /* ★ 2. a 태그를 위한 핵심 정렬 및 스타일 초기화 */
+    text-align: center;      /* 글자를 가운데로 */
+    text-decoration: none;   /* 밑줄 제거 */
+    box-sizing: border-box;  /* 패딩이 너비에 영향을 주지 않도록 */
 }
 
 /* REGISTER 버튼 (제출) */
@@ -90,7 +97,6 @@ body {
 .btn-submit:hover {
     background-color: #357abd;
 }
-
 /* RESET 버튼 (초기화) */
 .btn-reset {
     background-color: #f1f3f5;

@@ -21,7 +21,7 @@
         </div>
 
         <div class="btn-group">
-            <button type="reset" class="btn-reset">취소</button>
+            <a href="/todo/list" class="btn-reset">취소</a>
             <button type="submit" class="btn-submit">등록</button>
         </div>
     </form>
